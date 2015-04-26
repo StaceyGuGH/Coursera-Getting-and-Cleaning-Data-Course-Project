@@ -1,16 +1,16 @@
 # Coursera-Getting-and-Cleaning-Data-Course-Project
 
-The data used in this course project is data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.
+Based on course project description (https://class.coursera.org/getdata-013/human_grading/view/courses/973500/assessments/3/submissions), the data used in this course project is data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.
 The data for the project can be downloaed from:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-To summarize, the experiments was carried out with a group of 30 volunteers. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Based on certain sampling and signal processing strategy (refer to "README.txt" from the downloaded data), 10299 records were captured; 7352 were used as a training set, the remaining 2947 records were used as a test set. Each record included a 561-feature vector with time and frequency domain variables, its activity label, an identifier of the subject who carried out the experiment.
+To summarize, the experiments were carried out with a group of 30 volunteers. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Based on certain sampling and signal processing strategy (refer to "README.txt" from the downloaded data), 10299 records were captured; 7352 were used as a training set, the remaining 2947 records were used as a test set. Each record included a 561-feature vector with time and frequency domain variables, its activity label, an identifier of the subject who carried out the experiment.
 
 # Raw Data
-The downloaded data set, when unzipped, are in a folder  ".\getdata-projectfiles-UCI HAR Dataset\UCI HAR Dataset". There are 4 text files and 2 directories in this folder. 
+The downloaded data set, when unzipped, can be found in a folder named  ".\getdata-projectfiles-UCI HAR Dataset\UCI HAR Dataset". There are 4 text files and 2 directories in this folder. 
 
 ## File "README.txt"
-This file contains the detailed information on the raw data set.
+This file contains the detailed information on the raw data set and the experiments.
 
 ## File "activity_labels.txt"
 This file contains the mapping of activity ID's (1 to 6) and their corresponding activity names.
@@ -37,17 +37,17 @@ This file contains the list of names of the 561 features; the same feature name 
 ## Merge the test and training sets
 * The data in the test set (subject_test.txt, X_test.txt, and y_test.txt) are combined together as a data frame for the test set; 
 * The data in the trainiing set (subject_train.txt, X_train.txt, and y_train.txt) are combined together as a data frame for the training set; 
-* The data from the 2 steps above are then combined together as the merged data set.
+* The data sets from the 2 steps above are then combined together as the merged data set.
 
 ## Add descriptive names
-* Activity names in "activity_labels.txt" are merged into the merged data set from the step above
+* Activity names in "activity_labels.txt" are merged into the merged data set from the step above.
 * Feature names in "features.txt" are processed and assigned to the feature columns in the merged data set.  File "README.md" in this repo has more details on the sub-steps taken in this step.
 
 ## Extract data from the merged data set 
 Only the measurements on the mean and standard deviation for each feature is extracted. Regarding "measurements on the mean", only the columns whose name contain "mean()" is extracted.
 
 ## Create a 2nd tidy data set
-For the 2nd, independent tidy data set, the average of each extracted feature for each activity and each subject was calculated.
+For the 2nd, independent tidy data set, the average of each extracted feature (from the step above) for each activity and each subject was calculated.
 
 ## Output the 2nd tidy data set
 The final data set from the step above is saved as a txt file created with write.table() using row.name=FALSE.
