@@ -30,7 +30,7 @@ Next, the script reads file "activity_labels.txt", and merge it with "mergedData
 Next, the script reads file "features.txt", and assigned the names of columns 3 to 563 in "mergedData" to be their feature names.
 * Character "-" in the feature names in "features.txt" was replaced by "_" in "mergedData"
 * Character "," in the feature names in "features.txt" was replaced by "." in "mergedData"
-* In "mergedData", appended ".2" or ".3" to duplicated feature names originally from "features.txt" 
+* In "mergedData", appended ".1" or ".2" to duplicated feature names originally from "features.txt" 
 
 ## Step E
 Next, the script loads the "dplyr" package, then uses "select" to extract measurements on the mean and standard deviation; the extracted data is saved as "extractData"

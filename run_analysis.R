@@ -35,7 +35,7 @@ if (!file.exists(dataDir)) {
   ##features[,2] <- gsub("\\(\\)","FUN",features[,2])
 
     colnames(mergedData)[3:563] <- features[,2]
-    ## shortcut to add "*.2" or "*.2" to duplicated column names due to 
+    ## shortcut to add "*.1" or "*.2" to duplicated column names due to 
     ##          duplicated names in "features.txt"
     mergedData <- mergedData[,]
 
@@ -59,7 +59,7 @@ if (!file.exists(dataDir)) {
     write.table(mean.of.extractData, "./class3project-output.txt", row.name=FALSE)
 
 ## read the output txt file back for testing
-    data <- read.table("./class3project-output.txt", header = TRUE)
+    data <- read.table("./class3project-output.txt", header = TRUE, check.names=FALSE)
     View(data)
 
 
