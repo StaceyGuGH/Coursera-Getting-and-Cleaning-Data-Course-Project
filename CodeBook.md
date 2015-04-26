@@ -53,7 +53,7 @@ For the 2nd, independent tidy data set, the average of each extracted feature (f
 The final data set from the step above is saved as a txt file created with write.table() using row.name=FALSE.
 
 # Final data set columns
-For details on the feature, refer to Feature Info copied from "features_info.txt" (at the end of this code book).
+For details on the feature, refer to Feature Info copied from "features_info.txt" (at the end of this code book).  Note that according to "README.txt" from the downloaded data, each feature in the raw data was normalized and bounded within [-1,1].
 *  	1	Subject	: ID for the 30 volunteers
 *  	2	Activity_Label	: 6 activities peformed by the volunteers (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)
 *  	3	mean.of.tBodyAcc_mean()_X	: For each subject in column "Subject" and each activity in column "Activity_Label", the average of feature "tBodyAcc_mean()_X"
