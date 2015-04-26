@@ -43,14 +43,17 @@ This file contains the list of names of the 561 features; the same feature name 
 * Activity names in "activity_labels.txt" are merged into the merged data set from the step above
 * Feature names in "features.txt" are processed and assigned to the feature columns in the merged data set.  File "README.md" in this repo has more details on the sub-steps taken in this step.
 
-## Extracts only the measurements on the mean and standard deviation for each measurement. 
+## Extract data from the merged data set 
+Only the measurements on the mean and standard deviation for each feature is extracted. Regarding "measurements on the mean", only the columns whose name contain "mean()" is extracted.
 
-## Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+## Create a 2nd tidy data set
+For the 2nd, independent tidy data set, the average of each extracted feature for each activity and each subject was calculated.
 
-## save final data set as a txt file created with write.table() using row.name=FALSE
+## Output the 2nd tidy data set
+The final data set from the step above is saved as a txt file created with write.table() using row.name=FALSE.
 
 # Final data set columns
-For details on the feature, refer to Feature Info copied from "features_info.txt" (at the end of this code book)
+For details on the feature, refer to Feature Info copied from "features_info.txt" (at the end of this code book).
 *  	1	Subject	: ID for the 30 volunteers
 *  	2	Activity_Label	: 6 activities peformed by the volunteers (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)
 *  	3	mean.of.tBodyAcc_mean()_X	: For each subject in column "Subject" and each activity in column "Activity_Label", the average of feature "tBodyAcc_mean()_X"
